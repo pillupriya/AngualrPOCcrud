@@ -1,0 +1,22 @@
+<div><table class="table table-hover" id="contentToConvert">
+  <thead>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Mobile</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of list">
+      <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
+      <td (click)="onEdit(emp)">{{emp.position}}</td>
+      <td (click)="onEdit(emp)">{{emp.mobile}}</td>
+      <td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+      <!--<td><a class="btn text-danger" (click)="onEdit(emp.id)"><i class="fa fa-pencil-square-o"></i></a></td>-->
+    </tr>
+  </tbody>
+  
+</table>
+</div>
+<div>
+<button type="button" (click)="downloadPdf()" class="btn btn-lg btn-block btn-info">DOWNLOAD PDF</button>
+</div>
